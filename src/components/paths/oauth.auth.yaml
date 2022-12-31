@@ -32,7 +32,8 @@ get:
       schema:
         $ref: "../schemas/enums/Scope.yaml"
         required: true
-        collectionFormat: csv
+        style: form
+        explode: false
         example: innerscan,pedometer
     - in: query
       name: response_type

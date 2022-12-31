@@ -58,7 +58,8 @@ get:
       description: 取得する測定部位を指定する。未指定の場合はデフォルトの値を取得する。カンマ区切りで指定する。
       schema:
         $ref: "../schemas/enums/SphygmomanometerTag.yaml"
-        collectionFormat: csv
+        style: form
+        explode: false
         example: 622E,622F,6230
   responses:
     200:
