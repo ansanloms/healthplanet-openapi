@@ -57,7 +57,9 @@ get:
       name: tag
       description: 取得する測定部位を指定する。未指定の場合はデフォルトの値を取得する。カンマ区切りで指定する。
       schema:
-        $ref: "../schemas/enums/PedometerTag.yaml"
+        type: array
+        items:
+          $ref: "../schemas/enums/PedometerTag.yaml"
         style: form
         explode: false
         example: 6331

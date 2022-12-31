@@ -30,7 +30,9 @@ get:
       name: scope
       description: API の使用を許可する範囲。カンマ区切りで指定する。
       schema:
-        $ref: "../schemas/enums/Scope.yaml"
+        type: array
+        items:
+          $ref: "../schemas/enums/Scope.yaml"
         required: true
         style: form
         explode: false
