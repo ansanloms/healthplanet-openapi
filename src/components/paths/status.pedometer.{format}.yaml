@@ -1,6 +1,6 @@
 get:
   operationId: getStatusPedometer
-  summary: 体組成測定情報の取得
+  summary: 歩数測定情報の取得
   tags:
     - status
   description:
