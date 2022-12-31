@@ -1,0 +1,9 @@
+type: number
+description:
+  $ref: "./descriptions/DateType.md"
+enum:
+  - 0
+  - 1
+x-enum-varnames:
+  - registered
+  - measured

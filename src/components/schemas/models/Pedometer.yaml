@@ -1,0 +1,23 @@
+type: object
+description:
+  $ref: "./descriptions/Pedometer.md"
+required:
+  - date
+  - keydata
+  - model
+  - tag
+properties:
+  date:
+    type: string
+    description: 測定日時。
+    pattern: /([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})/
+  keydata:
+    type: string
+    description: 測定データ。
+    format: float
+  model:
+    $ref: "../enums/PedometerModel.yaml"
+    description: 測定機器名。
+  tag:
+    $ref: "../enums/PedometerTag.yaml"
+    description: 測定部位。

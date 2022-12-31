@@ -1,0 +1,17 @@
+type: string
+description:
+  $ref: "./descriptions/PedometerModel.md"
+enum:
+  - "00000000"
+  - "01000006"
+  - "01000059"
+  - "01000087"
+  - "01000090"
+  - "01000103"
+x-enum-varnames:
+  - manual
+  - FB-723
+  - FB-730
+  - AM-150
+  - AM-160
+  - AM-161

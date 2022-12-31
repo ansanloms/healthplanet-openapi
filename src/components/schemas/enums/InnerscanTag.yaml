@@ -1,0 +1,9 @@
+type: string
+description:
+  $ref: "./descriptions/InnerscanTag.md"
+enum:
+  - "6021"
+  - "6022"
+x-enum-varnames:
+  - weight
+  - bodyFatPercentage

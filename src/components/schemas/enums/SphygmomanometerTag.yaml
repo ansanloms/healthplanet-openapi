@@ -1,0 +1,11 @@
+type: string
+description:
+  $ref: "./descriptions/SphygmomanometerTag.md"
+enum:
+  - "622E"
+  - "622F"
+  - "6230"
+x-enum-varnames:
+  - highestBloodPressure
+  - lowestBloodPressure
+  - pulse

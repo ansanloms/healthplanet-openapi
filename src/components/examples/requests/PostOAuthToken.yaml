@@ -1,0 +1,5 @@
+client_id: 0.demo.apps.healthplanet.jp
+client_secret: 131156965920-RVcaOpgM7gelLJyFlprogo7VbvCLKBWxebANt
+redirect_uri: https://www.karadakarute.jp/tanita/&code=qjzknJTyQPCdSj12Bq4xjGEe7RPnRUuMHRFwU5SdwRqa8
+code: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+grant_type: authorization_code

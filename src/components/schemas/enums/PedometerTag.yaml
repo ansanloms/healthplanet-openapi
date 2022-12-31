@@ -1,0 +1,7 @@
+type: string
+description:
+  $ref: "./descriptions/PedometerTag.md"
+enum:
+  - "6331"
+x-enum-varnames:
+  - steps

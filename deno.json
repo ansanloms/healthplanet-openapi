@@ -1,0 +1,28 @@
+{
+  "lint": {
+    "files": {
+      "exclude": ["README.md", "src/**/*.md"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "exclude": ["README.md", "src/**/*.md"]
+    }
+  },
+  "importMap": "import_map.json",
+  "tasks": {
+    "lint": "deno task lint:deno && deno task lint:prettier",
+    "lint:deno": "deno lint",
+    "lint:prettier": "deno run --allow-sys --allow-env --allow-read --allow-write npm:prettier --loglevel warn --check --ignore-path .gitignore ./src",
+    "fix": "deno task fix:deno && deno task fix:prettier",
+    "fix:deno": "deno fmt",
+    "fix:prettier": "deno run --allow-sys --allow-env --allow-read --allow-write npm:prettier --loglevel warn --write --ignore-path .gitignore ./src",
+    "start": "deno run --allow-net --allow-read ./bin/start.ts",
+    "serve": "deno run --allow-net --allow-read ./bin/serve.ts",
+    "build": "deno task clean && deno task merge && cp ./index.html ./dist/.",
+    "clean": "rm -rf ./dist",
+    "merge": "deno run --allow-env --allow-sys --allow-read --allow-write npm:@apidevtools/swagger-cli@4.0.4 bundle ./src/api.yaml -t yaml -o ./dist/src/api.yaml",
+    "sort": "deno run --allow-read --allow-write ./bin/sort.ts",
+    "mockup": "deno run --allow-env --allow-sys --allow-net --allow-read npm:@stoplight/prism-cli@4.10.5 mock ./src/api.yaml"
+  }
+}
