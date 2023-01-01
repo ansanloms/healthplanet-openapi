@@ -74,3 +74,10 @@ get:
             正常例:
               value:
                 $ref: "../examples/responses/GetStatusInnerscan.yaml"
+        application/xml:
+          schema:
+            $ref: "../schemas/responses/GetStatusInnerscan.yaml"
+          examples:
+            正常例:
+              value:
+                $ref: "../examples/responses/GetStatusInnerscan.yaml"

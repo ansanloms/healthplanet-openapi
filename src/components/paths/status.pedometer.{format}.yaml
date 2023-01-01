@@ -74,3 +74,10 @@ get:
             正常例:
               value:
                 $ref: "../examples/responses/GetStatusPedometer.yaml"
+        application/xml:
+          schema:
+            $ref: "../schemas/responses/GetStatusPedometer.yaml"
+          examples:
+            正常例:
+              value:
+                $ref: "../examples/responses/GetStatusPedometer.yaml"
