@@ -1,0 +1,31 @@
+post:
+  operationId: postOAuthToken
+  summary: OAuth リクエストトークン取得
+  tags:
+    - oauth
+  description:
+    $ref: "./descriptions/postOAuthToken.md"
+  externalDocs:
+    description: Health Planet API 仕様書
+    url: https://www.healthplanet.jp/apis/api.html
+  requestBody:
+    description: 会員情報
+    content:
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: "../schemas/requests/PostOAuthToken.yaml"
+        examples:
+          デフォルト:
+            value:
+              $ref: "../examples/requests/PostOAuthToken.yaml"
+  responses:
+    200:
+      description: 処理成功時
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/responses/PostOAuthToken.yaml"
+          examples:
+            正常例:
+              value:
+                $ref: "../examples/responses/PostOAuthToken.yaml"

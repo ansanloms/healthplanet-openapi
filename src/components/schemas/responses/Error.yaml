@@ -1,25 +1,7 @@
 type: object
 required:
-  - status
-  - code
-  - title
-  - instance
+  - error
 properties:
-  status:
-    type: number
-    description: HTTP ステータスコード
-  code:
+  error:
     type: string
-    description: エラーコード
-  title:
-    type: string
-    description: エラータイトル
-  detail:
-    type: string
-    description: エラー詳細
-  instance:
-    type: string
-    description: エンドポイント
-  options:
-    type: object
-    description: 付加情報
+    description: エラーコード。

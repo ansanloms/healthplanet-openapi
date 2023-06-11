@@ -1,0 +1,5 @@
+type: string
+description:
+  $ref: "./descriptions/ResponseType.md"
+enum:
+  - code

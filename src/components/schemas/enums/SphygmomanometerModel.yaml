@@ -1,0 +1,17 @@
+type: string
+description:
+  $ref: "./descriptions/SphygmomanometerModel.md"
+enum:
+  - "00000000"
+  - "01000004"
+  - "01000005"
+  - "01000041"
+  - "01000078"
+  - "01000097"
+x-enum-varnames:
+  - manual
+  - BP-300
+  - BP-301
+  - TM2655
+  - BP-900
+  - BP-302

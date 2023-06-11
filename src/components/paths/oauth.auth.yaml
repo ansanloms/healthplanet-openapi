@@ -1,0 +1,46 @@
+get:
+  operationId: getOAuthAuth
+  summary: OAuth アクセス許可
+  tags:
+    - oauth
+  description:
+    $ref: "./descriptions/getOAuthAuth.md"
+  externalDocs:
+    description: Health Planet API 仕様書
+    url: https://www.healthplanet.jp/apis/api.html
+  parameters:
+    - in: query
+      name: client_id
+      description: アプリケーションの client_id 。
+      schema:
+        type: string
+        required: true
+        example: 0.demo.apps.healthplanet.jp
+    - in: query
+      name: redirect_uri
+      description: |
+        処理完了時、もしくはエラー発生時のリターン URL 。
+        アプリケーション登録にて指定したドメインの URL もしくは https://www.healthplanet.jp/success.html が指定可能。
+      schema:
+        type: string
+        required: true
+        format: uri
+        example: https://www.karadakarute.jp/tanita/
+    - in: query
+      name: scope
+      description: API の使用を許可する範囲。カンマ区切りで指定する。
+      schema:
+        type: array
+        items:
+          $ref: "../schemas/enums/Scope.yaml"
+        required: true
+        style: form
+        explode: false
+        example: innerscan,pedometer
+    - in: query
+      name: response_type
+      description: API のレスポンスを指定する。
+      schema:
+        $ref: "../schemas/enums/ResponseType.yaml"
+        required: true
+        example: code

@@ -1,0 +1,16 @@
+type: object
+required:
+  - access_token
+  - expires_in
+  - refresh_token
+properties:
+  access_token:
+    type: string
+    description: アクセストークン。
+  expires_in:
+    type: number
+    format: integer
+    description: アクセストークンの有効期限。
+  refresh_token:
+    type: string
+    description: リフレッシュトークン。

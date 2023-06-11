@@ -1,30 +1,64 @@
-openapi: 3.1.0
+openapi: 3.0.3
 info:
-  version: 0.0.1
-  title: OpenAPI Sample
+  version: 1.0.1
   description:
     $ref: ./description.md
+  title: Health Planet API
 servers:
-  - url: "https://api.example.com"
+  - url: "https://www.healthplanet.jp"
     description: Production Server
 paths:
-  /users:
-    $ref: ./components/paths/users.yaml
-  "/users/{id}":
-    $ref: "./components/paths/users.{id}.yaml"
+  /oauth/auth:
+    $ref: ./components/paths/oauth.auth.yaml
+  /oauth/token:
+    $ref: ./components/paths/oauth.token.yaml
+  "/status/innerscan.{format}":
+    $ref: "./components/paths/status.innerscan.{format}.yaml"
+  "/status/pedometer.{format}":
+    $ref: "./components/paths/status.pedometer.{format}.yaml"
+  "/status/sphygmomanometer.{format}":
+    $ref: "./components/paths/status.sphygmomanometer.{format}.yaml"
 components:
   schemas:
-    User:
-      $ref: ./components/schemas/models/User.yaml
-    EnumStatus:
-      $ref: ./components/schemas/enums/Status.yaml
-    RequestPostUsers:
-      $ref: ./components/schemas/requests/PostUsers.yaml
-    RequestPutUserId:
-      $ref: ./components/schemas/requests/PutUserId.yaml
+    Innerscan:
+      $ref: ./components/schemas/models/Innerscan.yaml
+    Pedometer:
+      $ref: ./components/schemas/models/Pedometer.yaml
+    Sphygmomanometer:
+      $ref: ./components/schemas/models/Sphygmomanometer.yaml
+    EnumDateType:
+      $ref: ./components/schemas/enums/DateType.yaml
+    EnumFormat:
+      $ref: ./components/schemas/enums/Format.yaml
+    EnumGrantType:
+      $ref: ./components/schemas/enums/GrantType.yaml
+    EnumInnerscanModel:
+      $ref: ./components/schemas/enums/InnerscanModel.yaml
+    EnumInnerscanTag:
+      $ref: ./components/schemas/enums/InnerscanTag.yaml
+    EnumPedometerModel:
+      $ref: ./components/schemas/enums/PedometerModel.yaml
+    EnumPedometerTag:
+      $ref: ./components/schemas/enums/PedometerTag.yaml
+    EnumResponseType:
+      $ref: ./components/schemas/enums/ResponseType.yaml
+    EnumScope:
+      $ref: ./components/schemas/enums/Scope.yaml
+    EnumSex:
+      $ref: ./components/schemas/enums/Sex.yaml
+    EnumSphygmomanometerModel:
+      $ref: ./components/schemas/enums/SphygmomanometerModel.yaml
+    EnumSphygmomanometerTag:
+      $ref: ./components/schemas/enums/SphygmomanometerTag.yaml
+    RequestPostOAuthToken:
+      $ref: ./components/schemas/requests/PostOAuthToken.yaml
     ResponseError:
       $ref: ./components/schemas/responses/Error.yaml
-    ResponseGetUsers:
-      $ref: ./components/schemas/responses/GetUsers.yaml
-    ResponseGetUsersId:
-      $ref: ./components/schemas/responses/GetUsersId.yaml
+    ResponseGetStatusInnerscan:
+      $ref: ./components/schemas/responses/GetStatusInnerscan.yaml
+    ResponseGetStatusPedometer:
+      $ref: ./components/schemas/responses/GetStatusPedometer.yaml
+    ResponseGetStatusSphygmomanometer:
+      $ref: ./components/schemas/responses/GetStatusSphygmomanometer.yaml
+    ResponsePostOAuthToken:
+      $ref: ./components/schemas/responses/PostOAuthToken.yaml

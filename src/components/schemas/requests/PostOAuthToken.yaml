@@ -1,0 +1,32 @@
+type: object
+required:
+  - client_id
+  - client_secret
+  - redirect_uri
+  - grant_type
+properties:
+  client_id:
+    type: string
+    description: アプリケーションの client_id 。
+  client_secret:
+    type: string
+    description: アプリケーションの client_secret 。
+  redirect_uri:
+    type: string
+    format: uri
+    description: |
+      処理完了時、もしくはエラー発生時のリターン URL 。
+      アプリケーション登録にて指定したドメインのURLもしくは https://www.healthplanet.jp/success.html が指定可能。
+  grant_type:
+    $ref: "../enums/GrantType.yaml"
+    description: API の付与タイプを指定する。
+  code:
+    type: string
+    description: |
+      /oauth/auth にて取得したコード。
+      grant_type が authorization_code の時に必須。
+  refresh_token:
+    type: string
+    description: |
+      リフレッシュトークン。
+      grant_type が refresh_token の時に必須。
