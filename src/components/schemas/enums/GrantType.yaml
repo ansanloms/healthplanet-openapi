@@ -1,6 +1,0 @@
-type: string
-description:
-  $ref: "./descriptions/GrantType.md"
-enum:
-  - authorization_code
-  - refresh_token

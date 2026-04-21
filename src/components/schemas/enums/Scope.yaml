@@ -1,8 +1,0 @@
-type: string
-description:
-  $ref: "./descriptions/Scope.md"
-enum:
-  - innerscan
-  - sphygmomanometer
-  - pedometer
-  - smug

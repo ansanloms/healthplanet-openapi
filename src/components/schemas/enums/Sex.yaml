@@ -1,6 +1,0 @@
-type: string
-description:
-  $ref: "./descriptions/Sex.md"
-enum:
-  - male
-  - female

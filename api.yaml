@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  version: 1.0.1
+  title: Health Planet API
+  description:
+    $ref: ./README.md
+servers:
+  - url: "https://www.healthplanet.jp"
+    description: Production Server
+paths:
+  /oauth/auth:
+    $ref: ./paths/oauth.auth.yaml
+  /oauth/token:
+    $ref: ./paths/oauth.token.yaml
+  "/status/innerscan.{format}":
+    $ref: "./paths/status.innerscan.{format}.yaml"
+  "/status/pedometer.{format}":
+    $ref: "./paths/status.pedometer.{format}.yaml"
+  "/status/sphygmomanometer.{format}":
+    $ref: "./paths/status.sphygmomanometer.{format}.yaml"
+components:
+  schemas:
+    Innerscan:
+      $ref: ./components/schemas/Innerscan.yaml
+    Pedometer:
+      $ref: ./components/schemas/Pedometer.yaml
+    Sphygmomanometer:
+      $ref: ./components/schemas/Sphygmomanometer.yaml
+    EnumDateType:
+      $ref: ./components/schemas/EnumDateType.yaml
+    EnumFormat:
+      $ref: ./components/schemas/EnumFormat.yaml
+    EnumGrantType:
+      $ref: ./components/schemas/EnumGrantType.yaml
+    EnumInnerscanModel:
+      $ref: ./components/schemas/EnumInnerscanModel.yaml
+    EnumInnerscanTag:
+      $ref: ./components/schemas/EnumInnerscanTag.yaml
+    EnumPedometerModel:
+      $ref: ./components/schemas/EnumPedometerModel.yaml
+    EnumPedometerTag:
+      $ref: ./components/schemas/EnumPedometerTag.yaml
+    EnumResponseType:
+      $ref: ./components/schemas/EnumResponseType.yaml
+    EnumScope:
+      $ref: ./components/schemas/EnumScope.yaml
+    EnumSex:
+      $ref: ./components/schemas/EnumSex.yaml
+    EnumSphygmomanometerModel:
+      $ref: ./components/schemas/EnumSphygmomanometerModel.yaml
+    EnumSphygmomanometerTag:
+      $ref: ./components/schemas/EnumSphygmomanometerTag.yaml
+    RequestPostOAuthToken:
+      $ref: ./components/schemas/RequestPostOAuthToken.yaml
+    ResponseError:
+      $ref: ./components/schemas/ResponseError.yaml
+    ResponseGetStatusInnerscan:
+      $ref: ./components/schemas/ResponseGetStatusInnerscan.yaml
+    ResponseGetStatusPedometer:
+      $ref: ./components/schemas/ResponseGetStatusPedometer.yaml
+    ResponseGetStatusSphygmomanometer:
+      $ref: ./components/schemas/ResponseGetStatusSphygmomanometer.yaml
+    ResponsePostOAuthToken:
+      $ref: ./components/schemas/ResponsePostOAuthToken.yaml
+  securitySchemes:
+    oauth2_access_token:
+      type: apiKey
+      in: query
+      name: access_token
+security:
+  - oauth2_access_token: []

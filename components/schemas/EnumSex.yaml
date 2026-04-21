@@ -1,0 +1,6 @@
+type: string
+description:
+  $ref: ./descriptions/EnumSex.md
+enum:
+  - male
+  - female

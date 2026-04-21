@@ -1,0 +1,6 @@
+type: string
+description:
+  $ref: ./descriptions/EnumGrantType.md
+enum:
+  - authorization_code
+  - refresh_token

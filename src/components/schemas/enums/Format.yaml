@@ -1,6 +1,0 @@
-type: string
-description:
-  $ref: "./descriptions/Format.md"
-enum:
-  - json
-  - xml
