@@ -1,4 +1,4 @@
-import * as yaml from "@std/yaml";
+import * as yaml from "yaml";
 import * as path from "@std/path";
 import type { OpenAPIV3_1 } from "openapi-types";
 
@@ -20,9 +20,15 @@ const sortKeys = <T>(
 
 const schemasComparator = (a: string, b: string): number => {
   const weight = (name: string): string => {
-    if (name.startsWith("Enum")) return `1${name}`;
-    if (name.startsWith("Request")) return `2${name}`;
-    if (name.startsWith("Response")) return `3${name}`;
+    if (name.startsWith("Enum")) {
+      return `1${name}`;
+    }
+    if (name.startsWith("Request")) {
+      return `2${name}`;
+    }
+    if (name.startsWith("Response")) {
+      return `3${name}`;
+    }
     return `0${name}`;
   };
   return weight(a).localeCompare(weight(b));
