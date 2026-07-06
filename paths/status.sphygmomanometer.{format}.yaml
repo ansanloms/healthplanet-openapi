@@ -1,12 +1,12 @@
 get:
   operationId: getStatusSphygmomanometer
-  summary: 血圧測定情報の取得
+  summary: 血圧測定情報の取得。
   tags:
     - status
   description:
     $ref: ./descriptions/getStatusSphygmomanometer.md
   externalDocs:
-    description: Health Planet API 仕様書
+    description: Health Planet API 仕様書。
     url: https://www.healthplanet.jp/apis/api.html
   parameters:
     - in: path
@@ -64,7 +64,7 @@ get:
         example: ["622E", "622F", "6230"]
   responses:
     200:
-      description: 処理成功時
+      description: 処理成功時。
       content:
         application/json:
           schema:
