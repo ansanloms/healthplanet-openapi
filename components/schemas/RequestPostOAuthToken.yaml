@@ -23,7 +23,7 @@ properties:
   code:
     type: string
     description: |
-      /oauth/auth にて取得したコード。
+      `/oauth/auth` にて取得したコード。
       grant_type が authorization_code の時に必須。
   refresh_token:
     type: string
