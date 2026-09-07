@@ -5,19 +5,19 @@ info:
   description:
     $ref: ./README.md
 servers:
-  - url: "https://www.healthplanet.jp"
+  - url: https://www.healthplanet.jp
     description: Production Server
 paths:
   /oauth/auth:
     $ref: ./paths/oauth.auth.yaml
   /oauth/token:
     $ref: ./paths/oauth.token.yaml
-  "/status/innerscan.{format}":
-    $ref: "./paths/status.innerscan.{format}.yaml"
-  "/status/pedometer.{format}":
-    $ref: "./paths/status.pedometer.{format}.yaml"
-  "/status/sphygmomanometer.{format}":
-    $ref: "./paths/status.sphygmomanometer.{format}.yaml"
+  /status/innerscan.{format}:
+    $ref: ./paths/status.innerscan.{format}.yaml
+  /status/pedometer.{format}:
+    $ref: ./paths/status.pedometer.{format}.yaml
+  /status/sphygmomanometer.{format}:
+    $ref: ./paths/status.sphygmomanometer.{format}.yaml
 components:
   schemas:
     Innerscan:
