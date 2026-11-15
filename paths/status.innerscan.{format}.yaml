@@ -1,10 +1,10 @@
 get:
-  operationId: getStatusInnerscan
+  operationId: getStatusInnerscanFormat
   summary: 体組成測定情報の取得。
   tags:
     - status
   description:
-    $ref: ./descriptions/getStatusInnerscan.md
+    $ref: ./descriptions/getStatusInnerscanFormat.md
   externalDocs:
     description: Health Planet API 仕様書。
     url: https://www.healthplanet.jp/apis/api.html
@@ -68,15 +68,15 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/ResponseGetStatusInnerscan.yaml
+            $ref: ../components/schemas/ResponseGetStatusInnerscanFormat.yaml
           examples:
             正常例:
               value:
-                $ref: ../examples/ResponseGetStatusInnerscan.yaml
+                $ref: ../examples/ResponseGetStatusInnerscanFormat/default.yaml
         application/xml:
           schema:
-            $ref: ../components/schemas/ResponseGetStatusInnerscan.yaml
+            $ref: ../components/schemas/ResponseGetStatusInnerscanFormat.yaml
           examples:
             正常例:
               value:
-                $ref: ../examples/ResponseGetStatusInnerscan.yaml
+                $ref: ../examples/ResponseGetStatusInnerscanFormat/default.yaml

@@ -1,10 +1,10 @@
 get:
-  operationId: getStatusSphygmomanometer
+  operationId: getStatusSphygmomanometerFormat
   summary: 血圧測定情報の取得。
   tags:
     - status
   description:
-    $ref: ./descriptions/getStatusSphygmomanometer.md
+    $ref: ./descriptions/getStatusSphygmomanometerFormat.md
   externalDocs:
     description: Health Planet API 仕様書。
     url: https://www.healthplanet.jp/apis/api.html
@@ -68,15 +68,15 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/ResponseGetStatusSphygmomanometer.yaml
+            $ref: ../components/schemas/ResponseGetStatusSphygmomanometerFormat.yaml
           examples:
             正常例:
               value:
-                $ref: ../examples/ResponseGetStatusSphygmomanometer.yaml
+                $ref: ../examples/ResponseGetStatusSphygmomanometerFormat/default.yaml
         application/xml:
           schema:
-            $ref: ../components/schemas/ResponseGetStatusSphygmomanometer.yaml
+            $ref: ../components/schemas/ResponseGetStatusSphygmomanometerFormat.yaml
           examples:
             正常例:
               value:
-                $ref: ../examples/ResponseGetStatusSphygmomanometer.yaml
+                $ref: ../examples/ResponseGetStatusSphygmomanometerFormat/default.yaml

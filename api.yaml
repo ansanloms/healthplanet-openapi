@@ -50,18 +50,18 @@ components:
       $ref: ./components/schemas/EnumSphygmomanometerModel.yaml
     EnumSphygmomanometerTag:
       $ref: ./components/schemas/EnumSphygmomanometerTag.yaml
-    RequestPostOAuthToken:
-      $ref: ./components/schemas/RequestPostOAuthToken.yaml
+    RequestPostOauthToken:
+      $ref: ./components/schemas/RequestPostOauthToken.yaml
     ResponseError:
       $ref: ./components/schemas/ResponseError.yaml
-    ResponseGetStatusInnerscan:
-      $ref: ./components/schemas/ResponseGetStatusInnerscan.yaml
-    ResponseGetStatusPedometer:
-      $ref: ./components/schemas/ResponseGetStatusPedometer.yaml
-    ResponseGetStatusSphygmomanometer:
-      $ref: ./components/schemas/ResponseGetStatusSphygmomanometer.yaml
-    ResponsePostOAuthToken:
-      $ref: ./components/schemas/ResponsePostOAuthToken.yaml
+    ResponseGetStatusInnerscanFormat:
+      $ref: ./components/schemas/ResponseGetStatusInnerscanFormat.yaml
+    ResponseGetStatusPedometerFormat:
+      $ref: ./components/schemas/ResponseGetStatusPedometerFormat.yaml
+    ResponseGetStatusSphygmomanometerFormat:
+      $ref: ./components/schemas/ResponseGetStatusSphygmomanometerFormat.yaml
+    ResponsePostOauthToken:
+      $ref: ./components/schemas/ResponsePostOauthToken.yaml
   securitySchemes:
     oauth2_access_token:
       type: apiKey

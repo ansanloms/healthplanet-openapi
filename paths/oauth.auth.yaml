@@ -1,10 +1,10 @@
 get:
-  operationId: getOAuthAuth
+  operationId: getOauthAuth
   summary: OAuth アクセス許可。
   tags:
     - oauth
   description:
-    $ref: ./descriptions/getOAuthAuth.md
+    $ref: ./descriptions/getOauthAuth.md
   externalDocs:
     description: Health Planet API 仕様書。
     url: https://www.healthplanet.jp/apis/api.html

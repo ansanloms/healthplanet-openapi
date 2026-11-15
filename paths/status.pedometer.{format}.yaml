@@ -1,10 +1,10 @@
 get:
-  operationId: getStatusPedometer
+  operationId: getStatusPedometerFormat
   summary: 歩数測定情報の取得。
   tags:
     - status
   description:
-    $ref: ./descriptions/getStatusPedometer.md
+    $ref: ./descriptions/getStatusPedometerFormat.md
   externalDocs:
     description: Health Planet API 仕様書。
     url: https://www.healthplanet.jp/apis/api.html
@@ -68,15 +68,15 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/ResponseGetStatusPedometer.yaml
+            $ref: ../components/schemas/ResponseGetStatusPedometerFormat.yaml
           examples:
             正常例:
               value:
-                $ref: ../examples/ResponseGetStatusPedometer.yaml
+                $ref: ../examples/ResponseGetStatusPedometerFormat/default.yaml
         application/xml:
           schema:
-            $ref: ../components/schemas/ResponseGetStatusPedometer.yaml
+            $ref: ../components/schemas/ResponseGetStatusPedometerFormat.yaml
           examples:
             正常例:
               value:
-                $ref: ../examples/ResponseGetStatusPedometer.yaml
+                $ref: ../examples/ResponseGetStatusPedometerFormat/default.yaml
