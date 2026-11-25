@@ -1,4 +1,6 @@
 type: object
+description:
+  $ref: ./descriptions/RequestPostOauthToken.md
 required:
   - client_id
   - client_secret

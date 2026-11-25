@@ -1,4 +1,6 @@
 type: object
+description:
+  $ref: ./descriptions/ResponseGetStatusPedometerFormat.md
 required:
   - birth_date
   - height

@@ -1,4 +1,6 @@
 type: object
+description:
+  $ref: ./descriptions/ResponseGetStatusSphygmomanometerFormat.md
 required:
   - birth_date
   - height

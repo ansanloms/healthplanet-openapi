@@ -30,14 +30,14 @@ get:
     - in: query
       name: scope
       required: true
-      style: form
-      explode: false
       description: API の使用を許可する範囲。カンマ区切りで指定する。
       schema:
         type: array
         items:
           $ref: ../components/schemas/EnumScope.yaml
         example: [innerscan, pedometer]
+      style: form
+      explode: false
     - in: query
       name: response_type
       required: true

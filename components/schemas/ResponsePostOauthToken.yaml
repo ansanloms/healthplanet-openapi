@@ -1,4 +1,6 @@
 type: object
+description:
+  $ref: ./descriptions/ResponsePostOauthToken.md
 required:
   - access_token
   - expires_in
