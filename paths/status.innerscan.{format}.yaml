@@ -54,14 +54,14 @@ get:
         example: "20120301000000"
     - in: query
       name: tag
-      style: form
-      explode: false
       description: 取得する測定部位を指定する。未指定の場合はデフォルトの値を取得する。カンマ区切りで指定する。
       schema:
         type: array
         items:
           $ref: ../components/schemas/EnumInnerscanTag.yaml
         example: ["6021", "6022"]
+      style: form
+      explode: false
   responses:
     200:
       description: 処理成功時。
